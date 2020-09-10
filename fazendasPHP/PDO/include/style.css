@@ -1,0 +1,23 @@
+    th {
+        position: -webkit-sticky;
+        position: sticky;
+        top: 0;
+        z-index: 1;
+    }
+    
+    th[scope=col] {
+        position: -webkit-sticky;
+        position: sticky;
+        left: 0;
+        z-index: 1;
+    }
+    
+    th[scope=col] {
+        vertical-align: top;
+        color: inherit;
+        background-color: #4e4d4d;
+    }
+    
+    body {
+        background-color: #979797;
+    }
