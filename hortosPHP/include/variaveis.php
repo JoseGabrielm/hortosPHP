@@ -36,9 +36,9 @@ if(isset($_POST['DT_ANO_REF'])){
 }
 
 if(isset($_POST['NM_HORTO'])){
-    $nm_horto="'".filter_input(INPUT_POST,'NM_HORTO' , FILTER_SANITIZE_SPECIAL_CHARS)."'";
+    $nm_horto=filter_input(INPUT_POST,'NM_HORTO' , FILTER_SANITIZE_SPECIAL_CHARS);
 }elseif(isset($_GET['NM_HORTO'])){
-    $nm_horto="'".filter_input(INPUT_GET,'NM_HORTO',FILTER_SANITIZE_SPECIAL_CHARS)."'";
+    $nm_horto=filter_input(INPUT_GET,'NM_HORTO',FILTER_SANITIZE_SPECIAL_CHARS);
 
 }else {
 

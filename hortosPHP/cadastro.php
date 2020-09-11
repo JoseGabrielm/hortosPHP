@@ -51,29 +51,29 @@ include('class/ClassCrud.php');
     
    
 
-    <label for="">código</label>
+    <label for="">CÓDIGO</label>
     <input type="number" class="form-control" id="CD_HORTO" name="CD_HORTO" placeholder="" value="<?php echo $cd_horto; ?>">
 
-    <label class="mt-4" for="">nome</label>
+    <label class="mt-4" for="">NOME</label>
     <input type="text" class="form-control" id="NM_HORTO" name="NM_HORTO" placeholder="" value="<?php echo $nm_horto; ?>">
 
-    <label class="mt-4" for="">ano de referência</label>
+    <label class="mt-4" for="">ANO DE REFERENCIA</label>
     <input type="number" class="form-control" id="DT_ANO_REF" name="DT_ANO_REF" placeholder="" value="<?php echo $dt_ano_ref; ?>">
   
-    <label class="mt-4"for="">cd casca</label>
+    <label class="mt-4"for="">CD CASCA</label>
     <input type="text" class="form-control" id="CD_CASCA" name="CD_CASCA" placeholder="" value="<?php echo $cd_casca; ?>">
 
-    <label class="mt-4" for="">estado</label>
+    <label class="mt-4" for="">ESTADO</label>
     <select class="form-control" id="SG_ESTADO_FEDERATIVO" name="SG_ESTADO_FEDERATIVO" >
       <option value="<?php echo $sg_estado_federativo; ?>"><?php echo $sg_estado_federativo; ?></option>
-      <option>sp</option>
-      <option>mg</option>
+      <option>SP</option>
+      <option>MG</option>
     </select>
 
-    <label class="mt-4"for="">vl mad neg</label>
+    <label class="mt-4"for="">VL MAD NEG</label>
     <input type="text" class="form-control" id="VL_MAD_NEG" name="VL_MAD_NEG" placeholder="" value="<?php echo $vl_mad_neg; ?>">
 
-    <label class="mt-4"for="">vl mad po</label>
+    <label class="mt-4"for="">VL MAD PO</label>
     <input type="text" class="form-control" id="VL_MAD_PO" name="VL_MAD_PO" placeholder="" value="<?php echo $vl_mad_po; ?>">
 
     <button type="submit" class="btn btn-primary mt-4 mb-2" value=""><?php echo $acao; ?></button>
