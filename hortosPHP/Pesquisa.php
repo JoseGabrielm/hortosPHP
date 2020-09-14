@@ -81,8 +81,8 @@ if(isset($_GET['ordem'])){$ordem = $_GET['ordem'];}else{$ordem = 'ASC';}
   
   $Crud=new ClassCrud();
   $BFetch=$Crud->searchDB(
-    "*",
-    "Inventario.CST_MAD_TERC_BACKUP",
+    "t.*, t.rowid",
+    "Inventario.CST_MAD_TERC_BACKUP t",
     "WHERE NM_HORTO LIKE UPPER('%$search%')",
     "ORDER BY $col $ordem",
     array(
@@ -111,7 +111,7 @@ if(isset($_GET['ordem'])){$ordem = $_GET['ordem'];}else{$ordem = 'ASC';}
       <td class="align-middle"><?php echo $Fetch['VL_MAD_NEG']; ?></td>
       <td class="align-middle"><?php echo $Fetch['DT_ANO_REF']; ?></td>
       <td>
-          <a href="<?php echo "cadastro.php?id={$Fetch['ID_HORTO']}"; ?>">
+          <a href="<?php echo "cadastro.php?id={$Fetch['ROWID']}"; ?>">
           <button class="btn btn-outline-success">Editar</button>
           </a>
           <a class="Apagar" href="<?php echo "controllers/ControllerApagar.php?id={$Fetch['ID_HORTO']}"; ?>">
