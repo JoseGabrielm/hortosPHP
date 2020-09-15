@@ -3,15 +3,15 @@ include('../class/ClassCrud.php');
 
 
 $Crud=new ClassCrud();
-$Id=filter_input(INPUT_GET,'id',FILTER_SANITIZE_SPECIAL_CHARS);
+$id=filter_input(INPUT_GET,'id',FILTER_SANITIZE_SPECIAL_CHARS);
 
 
 $Crud->deleteDB(
-        "cst_mad_terc",
-        "id_serv=?",
+        "CST_MAD_TERC_BACKUP",
+        "ID_HORTO=?",
         array(
 
-            $Id
+            $id
         )
 
         );

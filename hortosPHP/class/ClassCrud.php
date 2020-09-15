@@ -30,7 +30,7 @@ class ClassCrud extends ClassConexao{
 
     }
     public function insertDB($Tabela , $Colunas ,$Values , $Parametros){
-        $this->preparedStatements("INSERT INTO {$Tabela} ({$Colunas}) VALUES ({$Values});", $Parametros);
+        $this->preparedStatements("INSERT INTO {$Tabela} ({$Colunas}) VALUES ({$Values})", $Parametros);
         return $this->Crud;
     }
 

@@ -7,7 +7,7 @@ $Crud=new ClassCrud();
 
 if($acao=='cadastrar'){
 $Crud->insertDB(
-        "Inventario.CST_MAD_TERC_BACKUP",
+        "inventario.CST_MAD_TERC_BACKUP",
         "NM_HORTO, DT_ANO_REF, CD_HORTO, CD_CASCA, VL_MAD_PO, VL_MAD_NEG, SG_ESTADO_FEDERATIVO",
         "?, ?, ?, ?, ?, ?, ?",
         array(
@@ -18,8 +18,6 @@ $Crud->insertDB(
             $vl_mad_po,
             $vl_mad_neg,
             $sg_estado_federativo
-         
-           
         )
         
         
@@ -30,7 +28,7 @@ $Crud->insertDB(
 
 }else {
     $Crud->updateDB(
-        "Inventario.CST_MAD_TERC_BACKUP",
+        "inventario.CST_MAD_TERC_BACKUP",
         "NM_HORTO=?, DT_ANO_REF=?, CD_HORTO=?, CD_CASCA=?, VL_MAD_PO=?, VL_MAD_NEG=?, SG_ESTADO_FEDERATIVO=? ",
         "ID_HORTO=?",
         array(
