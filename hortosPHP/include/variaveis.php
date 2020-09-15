@@ -37,10 +37,10 @@ if(isset($_POST['DT_ANO_REF'])){
 
 if(isset($_POST['NM_HORTO'])){
     $nm_horto=filter_input(INPUT_POST,'NM_HORTO' , FILTER_SANITIZE_SPECIAL_CHARS);
-    $nm_horto= "'" . $nm_horto . "'";
+    
 }elseif(isset($_GET['NM_HORTO'])){
     $nm_horto=filter_input(INPUT_GET,'NM_HORTO',FILTER_SANITIZE_SPECIAL_CHARS);
-    $nm_horto= "'" . $nm_horto . "'";
+    
 }else {
 
     $nm_horto="";
@@ -60,10 +60,10 @@ if(isset($_POST['CD_HORTO'])){
 
 if(isset($_POST['CD_CASCA'])){
     $cd_casca=filter_input(INPUT_POST,'CD_CASCA', FILTER_SANITIZE_SPECIAL_CHARS);
-    "'" . $cd_casca . "'";
+    
 }elseif(isset($_GET['CD_CASCA'])){
     $cd_casca=filter_input(INPUT_GET,'CD_CASCA', FILTER_SANITIZE_SPECIAL_CHARS);
-    "'" . $cd_casca . "'";
+    
 }else {
 
     $cd_casca="";
@@ -72,7 +72,7 @@ if(isset($_POST['CD_CASCA'])){
 
 if(isset($_POST['SG_ESTADO_FEDERATIVO'])){
     $sg_estado_federativo=filter_input(INPUT_POST,'SG_ESTADO_FEDERATIVO', FILTER_SANITIZE_SPECIAL_CHARS);
-    $sg_estado_federativo= "'". $sg_estado_federativo ."'";
+    
 }elseif(isset($_GET['SG_ESTADO_FEDERATIVO'])){
     $sg_estado_federativo=filter_input(INPUT_GET,'SG_ESTADO_FEDERATIVO', FILTER_SANITIZE_SPECIAL_CHARS);
 

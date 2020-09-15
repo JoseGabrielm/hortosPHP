@@ -74,7 +74,7 @@ if (isset($_GET['ordem'])) {
 
     $Crud = new ClassCrud();
     $BFetch = $Crud->selectDB(
-      "*",
+      "t.*, t.rowid",
       "CST_MAD_TERC_BACKUP t",
       "ORDER BY $col $ordem ",
       array()
