@@ -51,7 +51,12 @@ if (isset($_GET['ordem'])) {
       <input class="form-control mr-sm-2 form-control-lg" type="search" value="<?php echo $barraPesq; ?>" id="search" name="search"></input>
     </div>
     <button class="btn btn-dark mr-sm-2" type="submit">PESQUISAR</button>
-
+    
+  <div class="col-2">
+    <a href="cadastro.php">
+          <button class="btn btn-outline-primary mr-sm-2 mt-2 ">CADASTRAR</button>
+        </a>
+  </div>
   </div>
   </form>
 
@@ -59,13 +64,13 @@ if (isset($_GET['ordem'])) {
   <table class="table table-bordered table-dark table-hover">
     <thead class="lg">
       <tr>
-        <th scope="col"><a class="column_sort" id="id" data-order="desc">Código </a></th>
-        <th scope="col"><a class="column_sort" id="nm_horto" data-order="desc">Nome</a></th>
-        <th scope="col"><a class="column_sort" id="sg_estado_federativo" data-order="desc">Estado</a></th>
-        <th scope="col"><a class="column_sort" id="cd_casca" data-order="desc">Código da Casca</a></th>
-        <th scope="col"><a class="column_sort" id="vl_mad_neg" data-order="desc">VL MAD NEG</a></th>
-        <th scope="col"><a class="column_sort" id="vl_mad_po" data-order="desc">VL MAD PO</a></th>
-        <th scope="col"><a class="column_sort" id="dt_ano_ref" data-order="desc">Ano de Referência</a></th>
+        <th scope="col">Código </th>
+        <th scope="col">Nome</th>
+        <th scope="col">Estado</th>
+        <th scope="col">Código da Casca</th>
+        <th scope="col">VL MAD NEG</th>
+        <th scope="col">VL MAD PO</th>
+        <th scope="col">Ano de Referência</th>
         <th scope="col">...</th>
       </tr>
     </thead>
