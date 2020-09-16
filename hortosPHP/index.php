@@ -55,8 +55,6 @@ if (isset($_GET['ordem'])) {
     </div>
     <button class="btn btn-dark mr-sm-2" type="submit">PESQUISAR</button>
   </div>
-
-
   </form>
 
 
