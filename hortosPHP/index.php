@@ -20,11 +20,11 @@ if (isset($_GET['ordem'])) {
 ?>
 
 <div class="col-9 m-auto">
-  <label class="mt-4" for="">Filtrar por</label>
-  <div class="row mb-4">
-    <div class="col-2">
+  <label class="mt-4 ml-1" for=""><b>Filtrar por:</b></label>
+  <div class="row ml-1 mb-3">
+    <div class="col-1.5">
       <form class="form-group" name="filtro" id="filtroOrdem" action="Pesquisa.php" method="GET">
-        <select class="form-control-lg" id="coluna" name="coluna">
+        <select class="form-control" id="coluna" name="coluna">
           <option value="CD_HORTO">--Coluna </option>
           <option value="CD_HORTO">Código</option>
           <option value="NM_HORTO">Nome</option>
@@ -34,36 +34,34 @@ if (isset($_GET['ordem'])) {
           <option value="DT_ANO_REF">Ano</option>
         </select>
     </div>
-    <div class="col-2">
-      <select class="form-control-lg" id="ordem" name="ordem">
+    <div class="col-1.5">
+      <select class="form-control" id="ordem" name="ordem">
         <option value="">--Ordem</option>
         <option value="ASC">Crescente</option>
         <option value="DESC">Decrescente</option>
       </select>
     </div>
-    <div class="col-3">
+    <div class="col-2">
       <a href="">
-        <button class="btn btn-success mt-2 mr-2">Aplicar</button>
+        <button class="btn btn-success mr-2">Aplicar</button>
       </a>
 
     </div>
+  </div>
+  <div class="row mb-2">
     <div class="col-6">
       <input class="form-control mr-sm-2 form-control-lg" type="search" value="<?php echo $barraPesq; ?>" id="search" name="search"></input>
     </div>
     <button class="btn btn-dark mr-sm-2" type="submit">PESQUISAR</button>
-    
-  <div class="col-2">
-    <a href="cadastro.php">
-          <button class="btn btn-outline-primary mr-sm-2 mt-2 ">CADASTRAR</button>
-        </a>
   </div>
-  </div>
+
+
   </form>
 
 
   <table class="table table-bordered table-dark table-hover">
     <thead class="lg">
-      <tr>
+      <tr class="text-center">
         <th scope="col">Código </th>
         <th scope="col">Nome</th>
         <th scope="col">Estado</th>
@@ -120,7 +118,6 @@ if (isset($_GET['ordem'])) {
 </div>
 
 
-</body>
 
 
 
