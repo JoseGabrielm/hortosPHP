@@ -30,7 +30,8 @@ if (isset($_GET['ordem'])) {
           <option value="NM_HORTO">Nome</option>
           <option value="SG_ESTADO_FEDERATIVO">Estado</option>
           <option value="CD_CASCA">Cód. da casca</option>
-          <option value="VL_MAD_PO">Preço</option>
+          <option value="VL_MAD_PO">VL MAD PO</option>
+          <option value="VL_MAD_NEG">VL MAD NEG</option>
           <option value="DT_ANO_REF">Ano</option>
         </select>
     </div>
