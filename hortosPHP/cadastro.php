@@ -40,6 +40,7 @@ include('class/ClassCrud.php');
 
 <header class="text-center mt-4">
    <h1><?php echo $acao; ?></h1>
+   <p><h3><?php echo " $nm_horto " . "-" . " $cd_horto" ; ?></h3></p>
     <hr> 
 <div class="container mt-4">
   <form name="formcadastro" id="formcadastro" method="post" action="controllers/ControllerCadastro.php" >
