@@ -30,7 +30,7 @@ $Crud->insertDB(
     $Crud->updateDB(
         "inventario.CST_MAD_TERC_BACKUP",
         "NM_HORTO=?, DT_ANO_REF=?, CD_HORTO=?, CD_CASCA=?, VL_MAD_PO=?, VL_MAD_NEG=?, SG_ESTADO_FEDERATIVO=? ",
-        "ID=?",
+        "ID_HORTO=?",
         array(
             
             $nm_horto,
@@ -40,7 +40,7 @@ $Crud->insertDB(
             $vl_mad_po,
             $vl_mad_neg,
             $sg_estado_federativo,
-            $id
+            $id_horto
         )
 
 

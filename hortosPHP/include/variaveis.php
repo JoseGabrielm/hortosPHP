@@ -106,15 +106,15 @@ if(isset($_POST['VL_MAD_NEG'])){
 
 }
 
-if(isset($_POST['ID'])){
-    $id=filter_input(INPUT_POST,'ID', FILTER_SANITIZE_SPECIAL_CHARS);
+if(isset($_POST['ID_HORTO'])){
+    $id_horto=filter_input(INPUT_POST,'ID_HORTO', FILTER_SANITIZE_SPECIAL_CHARS);
     
-}elseif(isset($_GET['ID'])){
-    $id=filter_input(INPUT_GET,'ID', FILTER_SANITIZE_SPECIAL_CHARS);
+}elseif(isset($_GET['ID_HORTO'])){
+    $id_horto=filter_input(INPUT_GET,'ID_HORTO', FILTER_SANITIZE_SPECIAL_CHARS);
 
 }else {
 
-    $id="";
+    $id_horto="";
 
 
 }
