@@ -95,10 +95,10 @@ if (isset($_GET['ordem'])) {
         <td class="align-middle"><?php echo $Fetch['VL_MAD_NEG']; ?></td>
         <td class="align-middle"><?php echo $Fetch['DT_ANO_REF']; ?></td>
         <td>
-          <a href="<?php echo "cadastro.php?id={$Fetch['ID_HORTO']}"; ?>">
+          <a href="<?php echo "cadastro.php?id={$Fetch['ID']}"; ?>">
             <button class="btn btn-outline-success">Editar</button>
           </a>
-          <a class="Apagar" href="<?php echo "controllers/ControllerApagar.php?id={$Fetch['ID_HORTO']}"; ?>">
+          <a class="Apagar" href="<?php echo "controllers/ControllerApagar.php?id={$Fetch['ID']}"; ?>">
             <button class="btn btn-outline-danger ">Apagar</button>
           </a>
         </td>

@@ -40,7 +40,7 @@ $Crud->insertDB(
             $vl_mad_po,
             $vl_mad_neg,
             $sg_estado_federativo,
-            $id_horto
+            $id
         )
 
 

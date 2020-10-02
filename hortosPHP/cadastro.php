@@ -8,9 +8,9 @@ include('class/ClassCrud.php');
           $acao="editar";
 
           $Crud=new ClassCrud();
-          $BFetch=$Crud->selectDB(" t.*, t.rowid ","CST_MAD_TERC_BACKUP t","where ID_HORTO=?", array($_GET['id']));
+          $BFetch=$Crud->selectDB(" t.*, t.rowid ","CST_MAD_TERC_BACKUP t","where ID=?", array($_GET['id']));
           $Fetch=$BFetch->fetch(PDO::FETCH_ASSOC);
-          $id_horto=$Fetch['ID_HORTO'];
+          $id=$Fetch['ID'];
           $cd_horto=$Fetch['CD_HORTO'];
           $nm_horto=$Fetch['NM_HORTO'];
           $dt_ano_ref=$Fetch['DT_ANO_REF'];
@@ -22,7 +22,7 @@ include('class/ClassCrud.php');
           
     }else{
           $acao="cadastrar";
-          $id_horto="";
+          $id="";
           $cd_horto="";
           $nm_horto="";
           $dt_ano_ref="";
@@ -47,7 +47,7 @@ include('class/ClassCrud.php');
 
     <input type="hidden" id="acao" name="acao" value="<?php echo $acao; ?>">
 
-    <input type="hidden" id="ID_HORTO" name="ID_HORTO" value="<?php echo $id_horto; ?>">
+    <input type="hidden" id="ID" name="ID" value="<?php echo $id; ?>">
     
    
 
