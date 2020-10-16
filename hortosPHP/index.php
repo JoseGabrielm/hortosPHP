@@ -1,9 +1,11 @@
 <?php
 include('include/header.php');
 include('class/ClassCrud.php');
+include("include/variaveis.php");
 ?>
 <?php
 
+$auth = "";
 
 if (isset($_GET['coluna'])) {
   $col = $_GET['coluna'];
@@ -15,7 +17,7 @@ if (isset($_GET['ordem'])) {
 } else {
   $ordem = '';
 }
-if (isset($auth)) {
+if ($user != '') {
   $estado = '';
 } else {
   $estado = 'disabled';

@@ -129,14 +129,25 @@ if(isset($_POST['search'])){
     $search="";
 }
 
-if(isset($_POST['ROWID'])){
-    $rowid=filter_input(INPUT_POST,'ROWID', FILTER_SANITIZE_SPECIAL_CHARS);
-}elseif(isset($_GET['ROWID'])){
-    $rowid=filter_input(INPUT_GET,'ROWID', FILTER_SANITIZE_SPECIAL_CHARS);
+if(isset($_POST['user'])){
+    $user=filter_input(INPUT_POST,'user', FILTER_SANITIZE_SPECIAL_CHARS);
+}elseif(isset($_GET['user'])){
+    $user=filter_input(INPUT_GET,'user', FILTER_SANITIZE_SPECIAL_CHARS) ;
 
 }else {
 
-    $rowid="";
+    $user="";
+}
+
+if(isset($_POST['senha'])){
+    $senha=filter_input(INPUT_POST,'senha', FILTER_SANITIZE_SPECIAL_CHARS);
+}elseif(isset($_GET['senha'])){
+    $senha=filter_input(INPUT_GET,'senha', FILTER_SANITIZE_SPECIAL_CHARS) ;
+
+}else {
+
+    $senha="";
+
 }
 
 ?>
