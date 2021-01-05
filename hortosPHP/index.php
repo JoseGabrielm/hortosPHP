@@ -17,11 +17,7 @@ if (isset($_GET['ordem'])) {
 } else {
   $ordem = '';
 }
-if ($user != '') {
-  $estado = '';
-} else {
-  $estado = 'disabled';
-}
+
 
 
 ?>
@@ -103,10 +99,10 @@ if ($user != '') {
         <td class="align-middle"><?php echo $Fetch['DT_ANO_REF']; ?></td>
         <td>
           <a class="Editar" href="<?php echo "cadastro.php?id={$Fetch['ID']}"; ?>">
-            <button class="btn btn-outline-success" <?php echo $estado; ?>>Editar</button>
+            <button class="btn btn-outline-success" >Editar</button>
           </a>
           <a class="Apagar" href="<?php echo "controllers/ControllerApagar.php?id={$Fetch['ID']}"; ?>">
-            <button class="btn btn-outline-danger" <?php echo $estado; ?>>Apagar</button>
+            <button class="btn btn-outline-danger" >Apagar</button>
           </a>
         </td>
       </tr>

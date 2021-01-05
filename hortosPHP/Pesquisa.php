@@ -86,7 +86,7 @@ if(isset($_GET['ordem'])){$ordem = $_GET['ordem'];}else{$ordem = 'ASC';}
   $BFetch=$Crud->searchDB(
     "t.*, t.rowid",
     "Inventario.CST_MAD_TERC_BACKUP t",
-    "WHERE NM_HORTO LIKE UPPER('%$search%')",
+    "WHERE $col LIKE UPPER('%$search%')",
     "ORDER BY $col $ordem",
     array(
      

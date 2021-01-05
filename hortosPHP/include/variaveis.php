@@ -106,6 +106,18 @@ if(isset($_POST['VL_MAD_NEG'])){
 
 }
 
+
+if(isset($_POST['CONTRATO'])){
+    $contrato=filter_input(INPUT_POST,'CONTRATO', FILTER_SANITIZE_SPECIAL_CHARS);
+}elseif(isset($_GET['CONTRATO'])){
+    $contrato=filter_input(INPUT_GET,'CONTRATO', FILTER_SANITIZE_SPECIAL_CHARS) ;
+
+}else {
+
+    $contrato="";
+}
+
+
 if(isset($_POST['ID'])){
     $id=filter_input(INPUT_POST,'ID', FILTER_SANITIZE_SPECIAL_CHARS);
     
@@ -129,25 +141,5 @@ if(isset($_POST['search'])){
     $search="";
 }
 
-if(isset($_POST['user'])){
-    $user=filter_input(INPUT_POST,'user', FILTER_SANITIZE_SPECIAL_CHARS);
-}elseif(isset($_GET['user'])){
-    $user=filter_input(INPUT_GET,'user', FILTER_SANITIZE_SPECIAL_CHARS) ;
-
-}else {
-
-    $user="";
-}
-
-if(isset($_POST['senha'])){
-    $senha=filter_input(INPUT_POST,'senha', FILTER_SANITIZE_SPECIAL_CHARS);
-}elseif(isset($_GET['senha'])){
-    $senha=filter_input(INPUT_GET,'senha', FILTER_SANITIZE_SPECIAL_CHARS) ;
-
-}else {
-
-    $senha="";
-
-}
 
 ?>
