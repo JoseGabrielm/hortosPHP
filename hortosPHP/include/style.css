@@ -24,3 +24,11 @@
     body {
         background-color: #e6e4e4;
     }
+    
+    .detalhe {
+        background-color: #7c7c7c;
+    }
+    
+    tr.expandir {
+        display: none;
+    }

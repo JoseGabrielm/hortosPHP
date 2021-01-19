@@ -11,5 +11,10 @@ $('.Apagar').on('click', function(event) {
 
     }
 
+});
 
+
+
+$('.header').click(function() {
+    $(this).toggleClass('expand').nextUntil('tr.header').slideToggle(0);
 });

@@ -89,7 +89,7 @@ if (isset($_GET['ordem'])) {
 
     ?>
 
-      <tr>
+      <tr class="header expand">
         <td class="align-middle"><b><?php echo $Fetch['CD_HORTO']; ?></b></td>
         <td class="align-middle"><?php echo $Fetch['NM_HORTO']; ?></td>
         <td class="align-middle"><?php echo $Fetch['SG_ESTADO_FEDERATIVO']; ?></td>
@@ -104,9 +104,19 @@ if (isset($_GET['ordem'])) {
           <a class="Apagar" href="<?php echo "controllers/ControllerApagar.php?id={$Fetch['ID']}"; ?>">
             <button class="btn btn-outline-danger" >Apagar</button>
           </a>
+          <a colspan="3"><span class="sign"></span></a>
         </td>
       </tr>
+      <tr class="expandir" >
+      <td></td>
+       <td>
+         <br>
+         
+      <p> Nº de contrato: <?php echo $Fetch['CONTRATO']; ?></p>
 
+         
+      </td>
+      </tr>
 
 
 
