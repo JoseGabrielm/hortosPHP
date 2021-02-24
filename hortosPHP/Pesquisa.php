@@ -12,7 +12,7 @@ include('include/header.php')
 <?php
 
 
-if(isset($_GET['coluna'])){$col = $_GET['coluna'];}else{$col = 'CD_HORTO';}
+if(isset($_GET['coluna'])){$col = $_GET['coluna'];}else{$col = 'NM_HORTO';}
 if(isset($_GET['ordem'])){$ordem = $_GET['ordem'];}else{$ordem = 'ASC';}
 
 ?>
@@ -23,9 +23,8 @@ if(isset($_GET['ordem'])){$ordem = $_GET['ordem'];}else{$ordem = 'ASC';}
     <div class="col-1.5">
       <form class="form-group" name="filtro" id="filtroOrdem" action="Pesquisa.php" method="GET">
         <select class="form-control" id="coluna" name="coluna">
-          <option value="CD_HORTO">--Coluna </option>
+          <option value="NM_HORTO">Nome </option>
           <option value="CD_HORTO">Código</option>
-          <option value="NM_HORTO">Nome</option>
           <option value="SG_ESTADO_FEDERATIVO">Estado</option>
           <option value="CD_CASCA">Cód. da casca</option>
           <option value="VL_MAD_PO">VL MAD PO</option>
@@ -35,7 +34,7 @@ if(isset($_GET['ordem'])){$ordem = $_GET['ordem'];}else{$ordem = 'ASC';}
     </div>
     <div class="col-1.5">
       <select class="form-control" id="ordem" name="ordem">
-        <option value="">--Ordem</option>
+        <option value="">--Ordem--</option>
         <option value="ASC">Crescente</option>
         <option value="DESC">Decrescente</option>
       </select>
@@ -86,7 +85,7 @@ if(isset($_GET['ordem'])){$ordem = $_GET['ordem'];}else{$ordem = 'ASC';}
   $BFetch=$Crud->searchDB(
     "t.*, t.rowid",
     "Inventario.CST_MAD_TERC_BACKUP t",
-    "WHERE $col LIKE UPPER('%$search%')",
+    "WHERE NM_HORTO LIKE UPPER('%$search%')",
     "ORDER BY $col $ordem",
     array(
      
@@ -105,7 +104,7 @@ if(isset($_GET['ordem'])){$ordem = $_GET['ordem'];}else{$ordem = 'ASC';}
 
 
 
-<tr>
+<tr class="header expand">
       <td class="align-middle"><?php echo $Fetch['CD_HORTO']; ?></td>
       <td class="align-middle"><?php echo $Fetch['NM_HORTO']; ?></td>
       <td class="align-middle"><?php echo $Fetch['SG_ESTADO_FEDERATIVO']; ?></td>
@@ -118,12 +117,23 @@ if(isset($_GET['ordem'])){$ordem = $_GET['ordem'];}else{$ordem = 'ASC';}
           <button class="btn btn-outline-success">Editar</button>
           </a>
           <a class="Apagar" href="<?php echo "controllers/ControllerApagar.php?id={$Fetch['ID']}"; ?>">
-          <button class="btn btn-outline-danger ">Apagar</button>
+          <button class="btn btn-outline-danger">Apagar</button>
           </a>
+      </td>
+      </tr>
+  <tr class="expandir" >
+      <td></td>
+       <td>
+         <br>
+         
+      <p> Nº de contrato: <?php echo $Fetch['CONTRATO']; ?></p>
+
+         
       </td>
     </tr>
 
-</tr>
+
+
 </div>
 
 
@@ -132,7 +142,7 @@ if(isset($_GET['ordem'])){$ordem = $_GET['ordem'];}else{$ordem = 'ASC';}
 
 
 <?php
-  }
+  };
 
 ?>
 

@@ -5,20 +5,8 @@ include("include/variaveis.php");
 ?>
 <?php
 
-$auth = "";
-
-if (isset($_GET['coluna'])) {
-  $col = $_GET['coluna'];
-} else {
-  $col = 'CD_HORTO';
-}
-if (isset($_GET['ordem'])) {
-  $ordem = $_GET['ordem'];
-} else {
-  $ordem = '';
-}
-
-
+$col = "CD_HORTO";
+$ordem = "ASC";
 
 ?>
 
@@ -27,10 +15,12 @@ if (isset($_GET['ordem'])) {
   <div class="row ml-1 mb-3">
     <div class="col-1.5">
       <form class="form-group" name="filtro" id="filtroOrdem" action="Pesquisa.php" method="GET">
+        
+        <input type="hidden" id="acao" name="acao" value="<?php echo $barraPesq; ?>">
+
         <select class="form-control" id="coluna" name="coluna">
-          <option value="CD_HORTO">--Coluna </option>
-          <option value="CD_HORTO">Código</option>
           <option value="NM_HORTO">Nome</option>
+          <option value="CD_HORTO">Código</option>
           <option value="SG_ESTADO_FEDERATIVO">Estado</option>
           <option value="CD_CASCA">Cód. da casca</option>
           <option value="VL_MAD_PO">VL MAD PO</option>
