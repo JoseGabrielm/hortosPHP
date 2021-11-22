@@ -2,9 +2,9 @@
 
  class ClassConexao{
 
-     public $dsn = "oci:dbname=BRP01;host=10.21.33.235";
-     public $username = "Inventario";                  
-     public $password = "in05rio04";             
+     public $dsn = "*";
+     public $username = "*";                  
+     public $password = "*";             
       
 
 public function conectaDB(){
